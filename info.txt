@@ -1,0 +1,29 @@
+Atributos gestión de citas medicas 
+1.Paciente (SQL)
+id: Identificador único (Long, autogenerado)
+nombre: Nombre del paciente (String)
+apellido: Apellido del paciente (String)
+documento: Número de documento o identificación (String)
+telefono: Número de teléfono de contacto (String)
+email: Correo electrónico (String)
+
+2. Médico (SQL)
+id: Identificador único (Long, autogenerado)
+nombre: Nombre del médico (String)
+apellido: Apellido del médico (String)
+especialidad: Área de especialización médica (String)
+licencia: Número de licencia médica (String)
+
+3. Cita (NoSQL) podemos usar mongodb
+id: Identificador único (String, generado por MongoDB)
+pacienteId: ID del paciente relacionado (Long)
+medicoId: ID del médico relacionado (Long)
+fechaHora: Fecha y hora de la cita (LocalDateTime)
+motivo: Razón de la cita (String)
+estado: Estado actual de la cita ("PROGRAMADA", "COMPLETADA", "CANCELADA")
+datosAdicionales: Mapa flexible para información adicional (Map<String, Object>)
+Puede almacenar resultados de la cita
+Datos médicos relevantes
+Notas del médico
+Prescripciones
+Cualquier otra información flexible
