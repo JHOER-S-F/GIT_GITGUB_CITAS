@@ -23,4 +23,7 @@ app.use('/pacientes', pacienteRoutes);
 app.use('/medicos', medicoRoutes);
 app.use('/citas', citaRoutes);
 
-app.listen(3000, () => console.log(`Servidor corriendo en http://localhost:${port}`));
+
+app.listen(port,()=>{
+    console.log(`Servidor corriendo en http://localhost:${port}`)
+});
