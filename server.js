@@ -16,8 +16,8 @@ const pacienteRoutes = require('./routes/pasienteRoutes');
 const medicoRoutes = require('./routes/medicoRoutes');
 const citaRoutes = require('./routes/citaRoutes');
 
-app.(req,res)=>{
-    ("pagina principal")
+app.get("/", (req,res)=>{
+    res.json("pagina principal")
 })
 app.use('/pacientes', pacienteRoutes);
 app.use('/medicos', medicoRoutes);
